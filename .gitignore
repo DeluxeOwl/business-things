@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+ent/*
+
+!ent/schema
+!ent/migrate/migrations
+!ent/generate.go
