@@ -20,8 +20,14 @@
 # Go workspace file
 go.work
 
-ent/*
+# Ignore everything in ent
+/ent/*
+# But don't ignore the 'schema', 'migrate', and 'generate.go' 
+!/ent/schema
+!/ent/migrate/
+!/ent/generate.go
 
-!ent/schema
-!ent/migrate/migrations
-!ent/generate.go
+# Then inside migrate, ignore everything
+/ent/migrate/*
+# But don't ignore the 'migrations'
+!/ent/migrate/migrations
